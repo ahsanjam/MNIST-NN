@@ -62,8 +62,3 @@ Given MNIST’s relative simplicity, both activation functions suffice to achiev
 
 ![image](https://github.com/ahsanjam/MNIST-NN/blob/main/Confusion%20Matrices)
 
-such as speed of convergence and slight variations in final performance—can guide choices for other, more complex tasks.![image](https://github.com/user-attachments/assets/5090dbce-c5f5-4d80-b4f7-cc680e2a2318)
-
-
-
-
