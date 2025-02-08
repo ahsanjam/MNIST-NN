@@ -1,8 +1,8 @@
-# MNIST-NN
+# MNIST-Neural Network
 
 ## Brief:
 
-A single layer (128 Neuron) neural network for detecting handwritten digits from the MNIST dataset. The code combines Batch Normalization (BN), Dropout, and Early Stopping to enhance performance and mitigate overfitting, while comparing ReLU and Tanh activation functions. The first iteration is done without any Batch Normalization, Dropout and Early Stopping just to see how both models work. Tanh performs better than ReLu in the first iteration (Tanh Model Accuracy: 96.9%, ReLu Model Accuracy: 92.5%) but in the second iteration after ensuring there is no overfitting and optimising the code, the ReLu model performs better (Tanh Model Accuracy: 97.1%, ReLu Model Accuracy: 97.9%) by just a slight margin. 
+A single layer (128 Neuron) neural network for detecting handwritten digits from the MNIST dataset. The code combines Batch Normalization (BN), Dropout, and Early Stopping to enhance performance and mitigate overfitting, while comparing ReLU and Tanh activation functions. The first iteration is done without any Batch Normalization, Dropout and Early Stopping just to see how both models work. Tanh performs better than ReLu in the first iteration (Tanh Model Accuracy: 96.9%, ReLu Model Accuracy: 92.5%) but in the second iteration after ensuring there is no overfitting and optimizing the code, the ReLu model performs better (Tanh Model Accuracy: 97.1%, ReLu Model Accuracy: 97.9%) by just a slight margin. 
 
 Provided below is the research backing behind the design of the Neural Network along with the technical performance and its outcomes.
 
@@ -29,7 +29,7 @@ o	(Prechelt, 1998) provides a foundational study of halting training when valida
 ### Model Architecture and Rationale:
 
 The architecture, consisting of a single hidden layer with 128 neurons, meets the criteria of a three-layer network that includes an input, hidden, and output layer. We enhanced it with Batch Normalization (BN) to stabilize activations and learning dynamics, Dropout (0.2) to reduce overfitting, and Early Stopping to halt training once validation loss ceased improving. These modifications reflect both established best practices in neural network design and practical constraints such as computational efficiency and implementation complexity.
-1. Batch Normalization: By normalizing intermediate feature distributions, BN addresses internal covariate shift, often leading to faster convergence and improved generalization (Ioffe & Szegedy, 2015).
+1. Batch Normalization: By normalizing intermediate feature distributions, BN addresses internal covariate shifts, often leading to faster convergence and improved generalization (Ioffe & Szegedy, 2015).
 2. Dropout: Randomly disables a fraction of neurons, diminishing the risk of overfitting and encouraging the network to learn more robust representations (Srivastava, et al., 2014).
 3. Early Stopping: Mitigates excessive training epochs that might lead to overfitting. By restoring the best weights at the end, it ensures optimal performance on unseen data (Prechelt, 1998).
 
