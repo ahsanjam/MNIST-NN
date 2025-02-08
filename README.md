@@ -8,21 +8,13 @@ Provided below is the research backing behind the design of the Neural Network a
 
 ## Key Design Decisions and Research Backing
 
-1.	Single Hidden Layer, 128 Neurons
-o	Why 128? (LeCun, et al., 1998) demonstrated that a modestly sized MLP can achieve high accuracy on MNIST. (Glorot & Bengio, 2010) highlighted initialization issues, but with 128 neurons, the network remains both capable and manageable.
-2.	Batch Normalization
-o	Why BN? (Nair & Hinton, 2015): It normalizes layer inputs to help mitigate internal covariate shift, stabilizing gradients and often accelerating training.
-3.	Activation Function Choices
-o	ReLU (Nair & Hinton, 2015): Reduces vanishing gradients and typically converges faster.
-o	Tanh (LeCun, et al., 1998): Historically popular, can be competitive for smaller networks, though it saturates for large absolute input values.
-4.	Dropout
-o	Introduced by (Srivastava, et al., 2014) to randomly drop connections, preventing co-adaptation of neurons and fighting overfitting.
-5.	Softmax Output + Categorical Crossentropy
-o	Standard in multi-class classification (Goodfellow, et al., 2016) and (Bishop, 2006), turning raw logits into probabilities and comparing these to one-hot encoded labels.
-6.	Adam Optimizer
-o	(Kingma & Ba, 2015) demonstrated that Adam adaptively tunes learning rates, often outperforming plain SGD in speed and reliability.
-7.	Early Stopping
-o	(Prechelt, 1998) provides a foundational study of halting training when validation loss plateaus, restoring the best weights to avoid overfitting.
+1.	Single Hidden Layer, 128 Neurons: Why 128? (LeCun, et al., 1998) demonstrated that a modestly sized MLP can achieve high accuracy on MNIST. (Glorot & Bengio, 2010) highlighted initialization issues, but with 128 neurons, the network remains both capable and manageable.
+2.	Batch Normalization: Why BN? (Nair & Hinton, 2015): It normalizes layer inputs to help mitigate internal covariate shift, stabilizing gradients and often accelerating training.
+3.	Activation Function Choices: ReLU (Nair & Hinton, 2015): Reduces vanishing gradients and typically converges faster. Tanh (LeCun, et al., 1998): Historically popular, can be competitive for smaller networks, though it saturates for large absolute input values.
+5.	Dropout: Introduced by (Srivastava, et al., 2014) to randomly drop connections, preventing co-adaptation of neurons and fighting overfitting.
+6.	Softmax Output + Categorical Crossentropy: Standard in multi-class classification (Goodfellow, et al., 2016) and (Bishop, 2006), turning raw logits into probabilities and comparing these to one-hot encoded labels.
+7.	Adam Optimizer: (Kingma & Ba, 2015) demonstrated that Adam adaptively tunes learning rates, often outperforming plain SGD in speed and reliability.
+8.	Early Stopping: (Prechelt, 1998) provides a foundational study of halting training when validation loss plateaus, restoring the best weights to avoid overfitting.
 
 ## Technical Performance and Model Outcomes:
 
